@@ -1,4 +1,4 @@
-package ru.medical.hello;
+package ru.medical.domain;
 
 public class Greeting {
 
