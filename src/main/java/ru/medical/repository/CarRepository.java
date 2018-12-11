@@ -6,6 +6,6 @@ import ru.medical.domain.Car;
 import java.util.List;
 
 public interface CarRepository extends CrudRepository<Car, Long> {
-    List<Car> findByNumber(String number);
-    List<Car> findByNumberContaining(String number);
+    List<Car> findByCarNumber(String number);
+    List<Car> findByCarNumberContaining(String number);
 }
