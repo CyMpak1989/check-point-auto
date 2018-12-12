@@ -43,8 +43,14 @@
             </li>
         </ul>
         <form method="post" action="filter" class="form-inline my-2 my-lg-0">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
             <input class="form-control mr-sm-2" name="filter" type="search" placeholder="Введите номер авто" aria-label="Введите номер авто">
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
+        </form>
+
+        <form action="/logout" method="post">
+            <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>
         </form>
     </div>
 </nav>

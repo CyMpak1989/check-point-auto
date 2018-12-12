@@ -86,6 +86,7 @@
         <label for="textArea1Comment">Комментарий</label>
         <textarea class="form-control" name="comment" rows="3"></textarea>
     </div>
+    <input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
     <button type="submit" class="btn btn-primary">Добавить пропуск</button>
 </form>
 

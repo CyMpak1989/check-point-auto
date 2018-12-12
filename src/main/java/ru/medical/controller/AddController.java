@@ -21,7 +21,7 @@ public class AddController {
         return "add";
     }
 
-    @PostMapping
+    @PostMapping("add")
     public String add(@RequestParam String surname,
                       @RequestParam String name,
                       @RequestParam String patronymic,
