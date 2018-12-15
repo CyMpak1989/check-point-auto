@@ -1,9 +1,6 @@
 package ru.medical.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Car {
@@ -19,11 +16,14 @@ public class Car {
     private String creationDate;
     private String expiryDate;
     private String comment;
+    @ManyToOne(fetch = FetchType.EAGER)
+    @JoinColumn(name = "user_id")
+    private User author;
 
-    public Car(){
+    public Car() {
     }
 
-    public Car(String surname, String name, String patronymic, String carNumber, String carMake, String creationDate, String expiryDate, String comment) {
+    public Car(String surname, String name, String patronymic, String carNumber, String carMake, String creationDate, String expiryDate, String comment, User author) {
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
@@ -32,6 +32,11 @@ public class Car {
         this.creationDate = creationDate;
         this.expiryDate = expiryDate;
         this.comment = comment;
+        this.author = author;
+    }
+
+    public String getAuthorName() {
+        return author != null ? author.getUsername() : "<none>";
     }
 
     public Long getId() {
@@ -112,5 +117,14 @@ public class Car {
 
     public void setExpiryDate(String expiryDate) {
         this.expiryDate = expiryDate;
+    }
+
+
+    public User getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(User author) {
+        this.author = author;
     }
 }
