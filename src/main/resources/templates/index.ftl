@@ -21,7 +21,7 @@
                         <a class="dropdown-item" href="#">Журнал пропусков</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Новый пользователь</a>
-                        <a class="dropdown-item" href="#">Журнал пользователей</a>
+                        <a class="dropdown-item" href="/user">Журнал пользователей</a>
                     </div>
                 </li>
             </ul>
