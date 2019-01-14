@@ -1,6 +1,5 @@
 <#import "parts/common.ftl" as c>
 <@c.page>
-
 <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
@@ -13,6 +12,7 @@
             <th scope="col">Дата окончания</th>
             <th scope="col">Примечание</th>
             <th scope="col">Автор</th>
+            <th scope="col">Радактировать</th>
         </tr>
     </thead>
     <tbody>
@@ -27,6 +27,7 @@
                 <th scope="row">${c.expiryDate}</th>
                 <th scope="row">${c.comment}</th>
                 <th scope="row">${c.authorName}</th>
+                <th scope="row"><button type="submit" class="btn btn-primary btn-sm">Редактировать</button></th>
             </tr>
         </#list>
     </tbody>

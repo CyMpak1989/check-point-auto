@@ -1,5 +1,5 @@
 <#include "security.ftl">
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="/">КПП</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -19,7 +19,7 @@
                          </a>
                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                              <a class="dropdown-item" href="/add">Пропуск</a>
-                             <a class="dropdown-item" href="#">Журнал пропусков</a>
+                             <a class="dropdown-item" href="/logpasses">Журнал пропусков</a>
                              <div class="dropdown-divider"></div>
                              <a class="dropdown-item" href="#">Новый пользователь</a>
                              <a class="dropdown-item" href="/user">Журнал пользователей</a>
@@ -27,14 +27,14 @@
                      </li>
                 </#if>
             </ul>
-            <form method="get" action="/index" class="form-inline my-2 my-lg-0">
 
+            <form method="get" action="/index" class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" name="filter" type="search" value="${filter?ifExists}"
                        placeholder="Введите номер авто" aria-label="Введите номер авто">
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Найти</button>
             </form>
 
-            <div class="navbar-text mr-3">${name}</div>
+            <div class="navbar-text mx-2">${name}</div>
             <form action="/logout" method="post">
                 <input type="hidden" name="_csrf" value="${_csrf.token}"/>
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign Out</button>

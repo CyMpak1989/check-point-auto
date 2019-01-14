@@ -22,12 +22,12 @@ public class AddController {
     @Autowired
     private CarRepository carRepository;
 
-    @GetMapping("/add")
+    @GetMapping
     public String index(Map<String, Object> model) {
         return "add";
     }
 
-    @PostMapping("add")
+    @PostMapping
     public String add(@RequestParam String surname,
                       @RequestParam String name,
                       @RequestParam String patronymic,
